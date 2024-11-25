@@ -1,0 +1,212 @@
+/* Reset básico e definição de fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f1e4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #ff8c00;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e07b00;
+}
+
+/* Seção Home */
+#home {
+    background-image: url('images/bolo1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-out;
+}
+
+/* Seção Sobre */
+#sobre {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+}
+
+#sobre h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Seção Produtos */
+#produtos {
+    padding: 50px 20px;
+    background-color: #fff7f0;
+    text-align: center;
+}
+
+#produtos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.produto {
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produto p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* Estilo de Contato */
+#contato {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ff8c00;
+    color: white;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #ff8c00;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e07b00;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .produto {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #produtos h2 {
+        font-size: 2rem;
+    }
+
+    #contato form {
+        width: 90%;
+    }
+}
